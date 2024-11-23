@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Database</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div id="form-container">
+    <form action="#">
+        <label>Topic</label>
+        <input type="text" class="option" id="topic" placeholder="Enter Topic">
+        <input type="text" class="option" id="sub_topic" placeholder="Enter Sub-topic">
+        <a href="guide.html">Check out topic Guide</a>
+        <br><br>
+
+        <!-- QUESTION -->
+        <label>Question</label>
+        <br>
+        <textarea id="question" placeholder="Enter Question"></textarea>
+        <br>
+        <br>
+
+        <!-- OPTIONS -->
+        <div id="options">Options<br>
+            <input type="text" class="option" id="option1" placeholder="Option 1" required>
+            <input type="text" class="option" id="option2" placeholder="Option 2" required>
+            <input type="text" class="option" id="option3" placeholder="Option 3" required>
+            <input type="text" class="option" id="option4" placeholder="Option 4" required>
+        </div>
+        <br><br>
+
+        <!-- CORRECT ANSWER -->
+        <label>Answer</label>
+        <input type="text" class="option" id="answer" placeholder="Enter Answer"><br><br>
+
+        <!-- TIME -->
+        <label>Time</label>
+        <input type="number" class="option" id="time" placeholder="Enter Time" required>
+        <label style="font-size: 12px;">time required to answer the question (in seconds)</label>
+        <br><br>
+
+
+        <!-- Tips -->
+        <label>Tips</label>
+        <br>
+        <textarea id="tips" placeholder="Enter some tips (optional)"></textarea><br><br>
+    </form>
+    </div>
+
+    <h4 id="msg"></h4>
+    <button id="submit" class="btn">Submit</button>
+    <a href="database.html" style="margin: 10px;" target="_blank">View Full Database</a>
+
+    <script src="help.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('input')
+        .forEach(input => {
+            input.setAttribute('autocomplete', 'off');
+        });
+
+        document.querySelectorAll('textarea')
+        .forEach(tag => {
+            tag.addEventListener('input', () => {
+                tag.style.height = 'auto';
+                tag.style.height = `${tag.scrollHeight - 20}px`;
+            });
+        })
+
+        document.getElementById("submit")
+        .addEventListener("click", () => {
+            event.preventDefault();
+            handleSubmit();
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+const ids = [
+  "topic",
+  "sub_topic",
+  "question",
+  "option1",
+  "option2",
+  "option3",
+  "option4",
+  "answer",
+  "time",
+  "tips",
+];
+
+const topics = {
+  history: "history",
+  h: "history",
+  geo: "geo",
+  g: "geo",
+  polity: "polity",
+  p: "polity",
+  static: "static",
+  s: "static",
+  eco: "eco",
+  e: "eco",
+  misc: "eco",
+  m: "eco",
+};
+
+const sub_topics = {
+  other: "other",
+  x: "other",
+  ancient: "ancient",
+  an: "ancient",
+  medieval: "medieval",
+  med: "medieval",
+  modern: "modern",
+  mod: "modern",
+  world: "world",
+  wo: "world",
+  indian: "indian",
+  ind: "indian",
+  article: "article",
+  ar: "article",
+  theory: "theory",
+  th: "theory",
+};

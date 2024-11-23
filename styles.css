@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: monospace;
+    background-color: #e6cba5;
+    color: #000000;
+}
+
+#question {
+    width: 100%;
+}
+
+#tips {
+    width: 100%;
+}
+
+.option {
+    margin: 5px;
+    font-family: monospace;
+}
+
+.btn {
+    background-color: #3498db;
+    /* Blue background */
+    color: white;
+    /* White text */
+    padding: 12px 24px;
+    /* Padding for size */
+    border: none;
+    /* Remove default border */
+    border-radius: 8px;
+    /* Rounded corners */
+    font-size: 16px;
+    /* Text size */
+    font-weight: bold;
+    /* Make the text bold */
+    text-align: center;
+    /* Center the text */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    /* Smooth transition */
+}
+
+/* Hover Effects */
+.btn:hover {
+    background-color: #2980b9;
+    /* Darker blue when hovered */
+    transform: scale(1.05);
+    /* Slightly enlarge the button */
+}
+
+/* Focus Effects (When button is clicked or focused) */
+.btn:focus {
+    outline: none;
+    /* Remove the default outline */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.6);
+    /* Add a blue shadow */
+}
+
+/* Active State (When button is pressed) */
+.btn:active {
+    background-color: #1f6a8b;
+    /* Even darker blue when clicked */
+    transform: scale(1);
+    /* Reset the scale when clicked */
+}
+
+#msg {
+    font-size: 18px;
+    color: #d00000;
+}
+
+input, textarea {
+    background-color: #ebdac2;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #f9f9f9;
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    /* Removes the blue outline */
+    border: 1px solid black;
+    /* Optional: Set a custom border on focus (e.g., light grey) */
+}
+
+li {
+    margin: 3px;
+    font-size: large;
+}
+
+.error {
+    border: 3px solid red;
+}
