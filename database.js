@@ -250,4 +250,4 @@ var send_delete_request = (index) => {
 };
 
 getData();
-// setInterval(getData, 5000);
+setInterval(getData, 5000);
