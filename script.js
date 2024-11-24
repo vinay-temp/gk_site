@@ -1,8 +1,6 @@
 const data = {};
 const errors = new Set();
 
-var highlightElement = (id) => {};
-
 var checkEmpty = (id) => {
   if (id == "tips") return;
 
@@ -37,7 +35,6 @@ var handleSubmit = () => {
   errors.clear();
 
   ids.forEach((id) => {
-    if (id == "topic" || id == "sub_topic") return
     document.getElementById(id).classList.remove("error");
   });
 
@@ -96,6 +93,7 @@ var uploadData = (data) => {
       document.getElementById("msg").innerHTML =
         "Question Successfully<br>Location: " + data.location;
       ids.forEach((id) => {
+        if (id == "topic" || id == "sub_topic") return;
         document.getElementById(id).value = "";
       });
     })
