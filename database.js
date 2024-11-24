@@ -96,7 +96,7 @@ var updateButtons = () => {
 };
 
 var createQuestionItem = (q, num) => {
-  let div = document.createElement("div");
+  let div = document.createElement("pre");
   div.id = "q_text";
   div.innerHTML = `${num}) ${q.question}`;
   question_item.appendChild(div);
