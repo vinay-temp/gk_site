@@ -7,7 +7,6 @@ const ids = [
   "option3",
   "option4",
   "answer",
-  "time",
   "tips",
 ];
 
@@ -22,8 +21,8 @@ const topics = {
   s: "static",
   eco: "eco",
   e: "eco",
-  misc: "eco",
-  m: "eco",
+  misc: "misc",
+  m: "misc",
 };
 
 const sub_topics = {

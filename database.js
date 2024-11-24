@@ -5,6 +5,9 @@ const question_item = document.querySelector(".question_item");
 const selected = { topic: "", sub_topic: "", question: "" };
 var topic_btns, sub_topic_btns, question_btns;
 
+const urlParams = new URLSearchParams(window.location.search);
+const admin = urlParams.get("admin");
+
 var createTopic = (topic) => {
   let button = document.createElement("button");
   button.className = "topic";
@@ -23,15 +26,15 @@ var createSubTopic = (topic, sub_topic) => {
   sub_topic_container.appendChild(button);
 };
 
-var createQuestion = (topic, sub_topic, question) => {
+var createQuestion = (topic, sub_topic, question, i) => {
   if (question == "size") return;
   let button = document.createElement("button");
   button.classList.add("question");
   button.classList.add(topic);
   button.classList.add(sub_topic);
   button.classList.add("hidden");
-  button.id = "Q" + question;
-  button.textContent = question;
+  button.id = "Q" + i;
+  button.textContent = i;
   question_container.appendChild(button);
 };
 
@@ -45,9 +48,9 @@ var createPage = (data) => {
     sub_topics.forEach((sub_topic) => {
       createSubTopic(topic, sub_topic);
 
-      let questions = Object.keys(data[topic][sub_topic]);
-      questions.forEach((question) => {
-        createQuestion(topic, sub_topic, question);
+      let questions = data[topic][sub_topic];
+      questions.forEach((question, i) => {
+        createQuestion(topic, sub_topic, question, i + 1);
       });
     });
   });
@@ -92,9 +95,6 @@ var updateButtons = () => {
   }
 };
 
-/* 
-        <button id="answer">Show answer</button>
-*/
 var createQuestionItem = (q, num) => {
   let div = document.createElement("div");
   div.id = "q_text";
@@ -117,17 +117,33 @@ var createQuestionItem = (q, num) => {
   ans.className = "hidden";
   ans.innerHTML = "Answer: " + q.answer;
 
+  let tips = document.createElement("div");
+  tips.id = "tips_text";
+  tips.className = "hidden";
+  tips.innerHTML = "Tips: " + q.tips;
+
   question_item.appendChild(ans);
+  question_item.appendChild(tips);
 
   let btn = document.createElement("button");
-  btn.id = "answer"
+  btn.id = "answer";
   btn.addEventListener("click", () => {
     document.getElementById("answer_text").classList.remove("hidden");
-  })
+    document.getElementById("tips_text").classList.remove("hidden");
+  });
   btn.innerHTML = "Show Answer";
 
   question_item.appendChild(btn);
 
+  let del_btn = document.createElement("button");
+  del_btn.id = "delete_button";
+  del_btn.addEventListener("click", () => {
+    send_delete_request(num - 1);
+  });
+  del_btn.innerHTML = "Delete question";
+
+  question_item.appendChild(document.createElement("br"));
+  question_item.appendChild(del_btn);
 };
 
 var getData = () => {
@@ -183,7 +199,7 @@ var getData = () => {
           selected.question = btn.id;
           createQuestionItem(
             data[selected.topic][selected.sub_topic][
-              selected.question.slice(1)
+              selected.question.slice(1) - 1
             ],
             selected.question
           );
@@ -198,5 +214,40 @@ var getData = () => {
     });
 };
 
+var send_delete_request = (index) => {
+  // Send a POST request using fetch
+  fetch("https://gk-server.glitch.me/delete_question", {
+    method: "POST", // Specify the HTTP method
+    headers: {
+      "Content-Type": "application/json", // Tell the server you're sending JSON
+    },
+    body: JSON.stringify({
+      question: index,
+      topic: selected.topic,
+      sub_topic: selected.sub_topic,
+      admin: admin,
+    }), // Convert the data to a JSON string
+  })
+    .then((response) => {
+      if (response.ok) {
+        return response.json(); // Parse the response body as JSON
+      } else if (response.status == 403) {
+        alert("Sorry, You do not have admin access!");
+      } else {
+        throw new Error("Network response was not ok");
+      }
+    })
+    .then((data) => {
+      if (data == undefined) return;
+      console.log("Response from server:", data);
+      selected.question = "";
+      question_item.innerHTML = "";
+      getData();
+    })
+    .catch((error) => {
+      console.error("There was a problem with the fetch operation:", error);
+    });
+};
+
 getData();
-setInterval(getData, 5000);
+// setInterval(getData, 5000);

@@ -37,6 +37,7 @@ var handleSubmit = () => {
   errors.clear();
 
   ids.forEach((id) => {
+    if (id == "topic" || id == "sub_topic") return
     document.getElementById(id).classList.remove("error");
   });
 

@@ -92,6 +92,21 @@ body {
     background-color: #d88405;
 }
 
+#delete_button {
+  background-color: #d45130;
+  padding: 10px;
+  font-size: 16px;
+  font-family: monospace;
+  cursor: pointer;
+  border: 2px solid #f9f9f9;
+  margin-top: 20px;
+}
+
+#delete_button:hover {
+    background-color: #d23b15;
+}
+
+
 .question_item {
     align-self: center;
     font-size: large;
