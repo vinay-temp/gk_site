@@ -68,3 +68,5 @@ const sub_topic_data = {
   misc: ["awards", "authors", "govt_schemes"],
   static: ["sports", "dance"],
 };
+
+console.log("Version: 1");
