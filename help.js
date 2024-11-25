@@ -23,6 +23,8 @@ const topics = {
   e: "eco",
   misc: "misc",
   m: "misc",
+  science: "science",
+  s: "science",
 };
 
 const sub_topics = {
@@ -42,4 +44,10 @@ const sub_topics = {
   ar: "article",
   theory: "theory",
   th: "theory",
+  physics: "physics",
+  phy: "physics",
+  chem: "chemistry",
+  chemistry: "chemistry",
+  biology: "biology",
+  bio: "biology"
 };
