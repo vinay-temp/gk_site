@@ -53,7 +53,9 @@ const sub_topics = {
   aw: "awards",
   awards: "awards",
   auth: "authors",
-  authors: "authors"
+  authors: "authors",
+  sports: "sports",
+  sp:  "sports"
 };
 
 const sub_topic_data = {
@@ -63,5 +65,5 @@ const sub_topic_data = {
   science: ["physics", "chemistry", "biology"],
   eco: [],
   misc: ["awards", "authors"],
-  static: [],
+  static: ["sports"],
 };
