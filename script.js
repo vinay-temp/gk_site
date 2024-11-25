@@ -15,6 +15,7 @@ var checkTopics = (topic, sub_topic) => {
     return;
   }
   if (!Object.keys(sub_topics).includes(data[sub_topic])) {
+    console.log("hereeeee");
     errors.add(sub_topic);
     return;
   }
@@ -44,6 +45,8 @@ var validateSubtopic = (topic, sub_topic) => {
   if (sub_topic == "other") return;
 
   if (sub_topic_data[topic].includes(sub_topic)) return;
+
+  console.log("HEREEEEEEE");
   errors.add("sub_topic");
 }
 
