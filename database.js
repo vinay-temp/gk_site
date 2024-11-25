@@ -120,7 +120,7 @@ var createQuestionItem = (q, num) => {
   let tips = document.createElement("div");
   tips.id = "tips_text";
   tips.className = "hidden";
-  tips.innerHTML = "Tips: " + q.tips;
+  tips.innerHTML = `Tips: ${q.tips}`;
 
   question_item.appendChild(ans);
   question_item.appendChild(tips);
