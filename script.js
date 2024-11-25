@@ -75,8 +75,8 @@ var handleSubmit = () => {
 
   if (messages.length == 0) {
     let upload_data = {
-      topic: topic_name,
-      sub_topic: sub_topic_name,
+      topic: topics[data.topic],
+      sub_topic: topics[data.sub_topic],
     };
 
     delete data.topic;
