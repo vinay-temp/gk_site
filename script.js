@@ -56,7 +56,11 @@ var handleSubmit = () => {
   });
 
   ids.forEach((id) => {
-    data[id] = document.getElementById(id).value.toLowerCase();
+    if (id == "topic" || id == "sub_topic") {
+      data[id] = document.getElementById(id).value.toLowerCase();
+    } else {
+     data[id] = document.getElementById(id).value; 
+    }
   });
 
   ids.forEach((id) => {
