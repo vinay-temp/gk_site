@@ -10,8 +10,18 @@ var checkEmpty = (id) => {
 };
 
 var checkTopics = (topic, sub_topic) => {
-  if (!Object.keys(topics).includes(data[topic])) errors.add(topic);
-  if (!Object.keys(sub_topics).includes(data[sub_topic])) errors.add(sub_topic);
+  if (!Object.keys(topics).includes(data[topic])) {
+    errors.add(topic);
+    return;
+  }
+  if (!Object.keys(sub_topics).includes(data[sub_topic])) {
+    errors.add(sub_topic);
+    return;
+  }
+
+  const topic_name = topics[data.topic];
+  const sub_topic_name = sub_topics[data.sub_topic];
+  validateSubtopic(topic_name, sub_topic_name);
 };
 
 var checkOptions = (a, b, c, d, answer) => {
@@ -53,11 +63,7 @@ var handleSubmit = () => {
     checkEmpty(id);
   });
 
-  checkTopics("topic", "sub_topic");
-  const topic_name = topics[data.topic];
-  const sub_topic_name = sub_topics[data.sub_topic];
-
-  validateSubtopic(topic_name, sub_topic_name);
+  checkTopics("topic", "sub_topic", data);
 
   checkOptions("option1", "option2", "option3", "option4", "answer");
 
