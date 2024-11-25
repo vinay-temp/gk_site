@@ -111,4 +111,10 @@ body {
     align-self: center;
     font-size: large;
     margin-top: 40px;
+    width: 80%;
 }
+
+#q_text, #tips_text, #answer_text {
+  white-space: pre-wrap;
+}
+

@@ -96,7 +96,7 @@ var updateButtons = () => {
 };
 
 var createQuestionItem = (q, num) => {
-  let div = document.createElement("pre");
+  let div = document.createElement("div");
   div.id = "q_text";
   div.innerHTML = `${num}) ${q.question}`;
   question_item.appendChild(div);
@@ -147,7 +147,7 @@ var createQuestionItem = (q, num) => {
 };
 
 var getData = () => {
-  fetch("http://localhost:3000/get_database")
+  fetch("https://gk-server.glitch.me/get_database")
     .then((res) => res.json()) // Parse the JSON response
     .then((res) => {
       topic_container.innerHTML = "";
@@ -216,7 +216,7 @@ var getData = () => {
 
 var send_delete_request = (index) => {
   // Send a POST request using fetch
-  fetch("http://localhost:3000/delete_question", {
+  fetch("https://gk-server.glitch.me/delete_question", {
     method: "POST", // Specify the HTTP method
     headers: {
       "Content-Type": "application/json", // Tell the server you're sending JSON
@@ -250,4 +250,4 @@ var send_delete_request = (index) => {
 };
 
 getData();
-// setInterval(getData, 5000);
+setInterval(getData, 5000);
