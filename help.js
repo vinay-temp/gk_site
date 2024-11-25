@@ -24,7 +24,7 @@ const topics = {
   misc: "misc",
   m: "misc",
   science: "science",
-  s: "science",
+  sci: "science",
 };
 
 const sub_topics = {
