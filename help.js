@@ -28,8 +28,6 @@ const topics = {
 };
 
 const sub_topics = {
-  other: "other",
-  x: "other",
   ancient: "ancient",
   an: "ancient",
   medieval: "medieval",
