@@ -44,10 +44,6 @@ var validateSubtopic = (topic, sub_topic) => {
   if (sub_topic == "other") return;
 
   if (sub_topic_data[topic].includes(sub_topic)) return;
-
-  console.log(topic);
-  console.log(sub_topic);
-  console.log(sub_topic_data);
   
   errors.add("sub_topic");
 }
