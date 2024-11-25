@@ -30,6 +30,13 @@ var checkOptions = (a, b, c, d, answer) => {
     errors.add(answer);
 };
 
+var validateSubtopic = (topic, sub_topic) => {
+  if (sub_topic == "other") return;
+
+  if (sub_topic_data[topic].includes(sub_topic)) return;
+  errors.add("sub_topic");
+}
+
 var handleSubmit = () => {
   document.getElementById("msg").innerHTML = "";
   errors.clear();
@@ -47,6 +54,11 @@ var handleSubmit = () => {
   });
 
   checkTopics("topic", "sub_topic");
+  const topic_name = topics[data.topic];
+  const sub_topic_name = sub_topics[data.sub_topic];
+
+  validateSubtopic(topic_name, sub_topic_name);
+
   checkOptions("option1", "option2", "option3", "option4", "answer");
 
   let messages = [];
@@ -57,8 +69,8 @@ var handleSubmit = () => {
 
   if (messages.length == 0) {
     let upload_data = {
-      topic: topics[data.topic],
-      sub_topic: sub_topics[data.sub_topic],
+      topic: topic_name,
+      sub_topic: sub_topic_name,
     };
 
     delete data.topic;
@@ -72,7 +84,7 @@ var handleSubmit = () => {
 
 var uploadData = (data) => {
   // Send a POST request using fetch
-  fetch("https://gk-server.glitch.me/post_question", {
+  fetch("http://localhost:3000/post_question", {
     method: "POST", // Specify the HTTP method
     headers: {
       "Content-Type": "application/json", // Tell the server you're sending JSON

@@ -49,5 +49,17 @@ const sub_topics = {
   chem: "chemistry",
   chemistry: "chemistry",
   biology: "biology",
-  bio: "biology"
+  bio: "biology",
+  aw: "awards",
+  awards: "awards",
+};
+
+const sub_topic_data = {
+  history: ["ancient", "medieval", "modern"],
+  geo: ["world", "indian"],
+  polity: ["article", "theory"],
+  science: ["physics", "chemistry", "biology"],
+  eco: [],
+  misc: ["awards"],
+  static: [],
 };
