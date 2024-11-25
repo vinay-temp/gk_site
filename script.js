@@ -84,7 +84,7 @@ var handleSubmit = () => {
 
 var uploadData = (data) => {
   // Send a POST request using fetch
-  fetch("http://localhost:3000/post_question", {
+  fetch("https://gk-server.glitch.me/post_question", {
     method: "POST", // Specify the HTTP method
     headers: {
       "Content-Type": "application/json", // Tell the server you're sending JSON
