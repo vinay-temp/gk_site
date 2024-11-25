@@ -55,7 +55,8 @@ const sub_topics = {
   sports: "sports",
   sp:  "sports",
   govt_schemes: "govt_schemes",
-  gvtsch: "govt_schemes"
+  gvtsch: "govt_schemes",
+  dance: "dance",
 };
 
 const sub_topic_data = {
@@ -65,5 +66,5 @@ const sub_topic_data = {
   science: ["physics", "chemistry", "biology"],
   eco: [],
   misc: ["awards", "authors", "govt_schemes"],
-  static: ["sports"],
+  static: ["sports", "dance"],
 };
