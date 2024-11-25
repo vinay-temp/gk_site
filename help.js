@@ -52,6 +52,8 @@ const sub_topics = {
   bio: "biology",
   aw: "awards",
   awards: "awards",
+  auth: "authors",
+  authors: "authors"
 };
 
 const sub_topic_data = {
@@ -60,6 +62,6 @@ const sub_topic_data = {
   polity: ["article", "theory"],
   science: ["physics", "chemistry", "biology"],
   eco: [],
-  misc: ["awards"],
+  misc: ["awards", "authors"],
   static: [],
 };
