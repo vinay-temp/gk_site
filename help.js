@@ -57,6 +57,8 @@ const sub_topics = {
   govt_schemes: "govt_schemes",
   gvtsch: "govt_schemes",
   dance: "dance",
+  cen: "census",
+  census: "census"
 };
 
 const sub_topic_data = {
@@ -65,8 +67,8 @@ const sub_topic_data = {
   polity: ["article", "theory"],
   science: ["physics", "chemistry", "biology"],
   eco: [],
-  misc: ["awards", "authors", "govt_schemes"],
+  misc: ["awards", "authors", "govt_schemes", "census"],
   static: ["sports", "dance"],
 };
 
-console.log("Version: 1");
+console.log("Version: 2");
