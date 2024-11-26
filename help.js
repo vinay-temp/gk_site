@@ -58,7 +58,9 @@ const sub_topics = {
   gvtsch: "govt_schemes",
   dance: "dance",
   cen: "census",
-  census: "census"
+  census: "census",
+  taxes: "taxes",
+  fiveyear: "five_year_plans",
 };
 
 const sub_topic_data = {
@@ -66,9 +68,9 @@ const sub_topic_data = {
   geo: ["world", "indian"],
   polity: ["article", "theory"],
   science: ["physics", "chemistry", "biology"],
-  eco: [],
+  eco: ["taxes", "five_year_plans"],
   misc: ["awards", "authors", "govt_schemes", "census"],
   static: ["sports", "dance"],
 };
 
-console.log("Version: 2");
+console.log("Version: 3");
