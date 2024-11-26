@@ -138,7 +138,7 @@ var createQuestionItem = (q, num) => {
   let del_btn = document.createElement("button");
   del_btn.id = "delete_button";
   del_btn.addEventListener("click", () => {
-    send_delete_request(num - 1);
+    send_delete_request(num.slice(1) - 1);
   });
   del_btn.innerHTML = "Delete question";
 
