@@ -63,7 +63,8 @@ const sub_topics = {
   census: "census",
   taxes: "taxes",
   fiveyear: "five_year_plans",
-  24: "24",
+  year_2024: "year_2024",
+  24: "year_2024",
   festival: "festival",
   fs: "festival"
 };
@@ -76,7 +77,7 @@ const sub_topic_data = {
   eco: ["taxes", "five_year_plans"],
   misc: ["awards", "authors", "govt_schemes", "census"],
   static: ["sports", "dance", "festival"],
-  current_affairs: ["24"]
+  current_affairs: ["year_2024"]
 };
 
-console.log("Version: 4");
+console.log("Version: 5");
