@@ -80,4 +80,6 @@ const sub_topic_data = {
   current_affairs: ["year_2024"]
 };
 
-console.log("Version: 5");
+let version = document.createElement("p");
+version.innerHTML = "Version: 6";
+document.querySelector("body").appendChild(version);
