@@ -25,6 +25,8 @@ const topics = {
   m: "misc",
   science: "science",
   sci: "science",
+  current_affairs: "current_affairs",
+  ca: "current_affairs"
 };
 
 const sub_topics = {
@@ -61,6 +63,9 @@ const sub_topics = {
   census: "census",
   taxes: "taxes",
   fiveyear: "five_year_plans",
+  24: "24",
+  festival: "festival",
+  fs: "festival"
 };
 
 const sub_topic_data = {
@@ -70,7 +75,8 @@ const sub_topic_data = {
   science: ["physics", "chemistry", "biology"],
   eco: ["taxes", "five_year_plans"],
   misc: ["awards", "authors", "govt_schemes", "census"],
-  static: ["sports", "dance"],
+  static: ["sports", "dance", "festival"],
+  current_affairs: ["24"]
 };
 
-console.log("Version: 3");
+console.log("Version: 4");
