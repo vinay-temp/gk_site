@@ -62,6 +62,7 @@ const sub_topics = {
   cen: "census",
   census: "census",
   taxes: "taxes",
+  "five_year_plans": "five_year_plans",
   fiveyear: "five_year_plans",
   year_2024: "year_2024",
   24: "year_2024",
