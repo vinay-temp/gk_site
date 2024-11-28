@@ -65,6 +65,8 @@ const sub_topics = {
   fiveyear: "five_year_plans",
   year_2024: "year_2024",
   24: "year_2024",
+  year_2023: "year_2023",
+  23: "year_2023",
   festival: "festival",
   fs: "festival"
 };
@@ -77,9 +79,9 @@ const sub_topic_data = {
   eco: ["taxes", "five_year_plans"],
   misc: ["awards", "authors", "govt_schemes", "census"],
   static: ["sports", "dance", "festival"],
-  current_affairs: ["year_2024"]
+  current_affairs: ["year_2024", "year_2023"]
 };
 
 let version = document.createElement("p");
-version.innerHTML = "Version: 6";
+version.innerHTML = "Version: 7";
 document.querySelector("body").appendChild(version);
