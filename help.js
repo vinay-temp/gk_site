@@ -40,6 +40,9 @@ const sub_topics = {
   wo: "world",
   indian: "indian",
   ind: "indian",
+  space: "space",
+  rivers: "rivers",
+  rocks: "rocks",
   article: "article",
   ar: "article",
   theory: "theory",
@@ -74,7 +77,7 @@ const sub_topics = {
 
 const sub_topic_data = {
   history: ["ancient", "medieval", "modern"],
-  geo: ["world", "indian"],
+  geo: ["world", "indian", "space", "rocks", "rivers"],
   polity: ["article", "theory"],
   science: ["physics", "chemistry", "biology"],
   eco: ["taxes", "five_year_plans"],
