@@ -26,7 +26,9 @@ const topics = {
   science: "science",
   sci: "science",
   current_affairs: "current_affairs",
-  ca: "current_affairs"
+  ca: "current_affairs",
+  important: "important",
+  imp: "important"
 };
 
 const sub_topics = {
@@ -72,7 +74,21 @@ const sub_topics = {
   year_2023: "year_2023",
   23: "year_2023",
   festival: "festival",
-  fs: "festival"
+  fs: "festival",
+  amendments: "amendments",
+  amend: "amendments",
+  acts_of_india: "acts_of_india",
+  acts: "acts_of_india",
+  viceroys: "viceroys",
+  vice: "viceroys",
+  cong_session: "cong_session",
+  cong: "cong_session",
+  schemes: "govt_schemes",
+  socio_movements: "socio_movements",
+  socio_mov: "socio_movements",
+  battles: "battles",
+  passes: "passes",
+  lakes: "lakes"
 };
 
 const sub_topic_data = {
@@ -83,9 +99,10 @@ const sub_topic_data = {
   eco: ["taxes", "five_year_plans"],
   misc: ["awards", "authors", "govt_schemes", "census"],
   static: ["sports", "dance", "festival"],
-  current_affairs: ["year_2024", "year_2023"]
+  current_affairs: ["year_2024", "year_2023"],
+  important: ["amendments", "acts_of_india", "viceroys", "cong_session", "govt_schemes", "socio_movements", "battles", "passes", "lakes"]
 };
 
 let version = document.createElement("p");
-version.innerHTML = "Version: 7";
+version.innerHTML = "Version: 8";
 document.querySelector("body").appendChild(version);
