@@ -83,7 +83,7 @@ const sub_topics = {
   vice: "viceroys",
   cong_session: "cong_session",
   cong: "cong_session",
-  schemes: "govt_schemes",
+  schemes: "schemes",
   socio_movements: "socio_movements",
   socio_mov: "socio_movements",
   battles: "battles",
@@ -100,9 +100,9 @@ const sub_topic_data = {
   misc: ["awards", "authors", "govt_schemes", "census"],
   static: ["sports", "dance", "festival"],
   current_affairs: ["year_2024", "year_2023"],
-  important: ["amendments", "acts_of_india", "viceroys", "cong_session", "govt_schemes", "socio_movements", "battles", "passes", "lakes"]
+  important: ["amendments", "acts_of_india", "viceroys", "cong_session", "schemes", "socio_movements", "battles", "passes", "lakes"]
 };
 
 let version = document.createElement("p");
-version.innerHTML = "Version: 8";
+version.innerHTML = "Version: 9";
 document.querySelector("body").appendChild(version);
